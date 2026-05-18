@@ -6,7 +6,7 @@ public class Empleados {
     private double salario;
 
     public Empleados(String nombre, String edadText, double salario) {
-        if (nombre == null){
+        if (nombre == null || nombre.trim().isEmpty()){
             throw new IllegalArgumentException("El nombre no puede estar vacio");
         }
         this.nombre = nombre;
@@ -15,7 +15,7 @@ public class Empleados {
     }
 
     public void setEdad(String edadText) {
-        if (edadText == null) {
+        if (edadText == null || edadText.trim().isEmpty()) {
             throw new IllegalArgumentException("La edad no puede ser nulo.");
         }
         this.edad = Integer.parseInt(edadText.trim());
