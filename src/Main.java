@@ -9,8 +9,10 @@ public class Main {
         jefe.mostrarDatos();
 
         System.out.println("Calculando bono extremo para forzar el desbordamiento numérico...");
-        jefe.forzarOverflowSalario(Double.MAX_VALUE);
-
-        System.out.println("Este mensaje no saldrá en consola.");
+        try {
+            jefe.forzarOverflowSalario(Double.MAX_VALUE);
+        } catch (ArithmeticException e) {
+            System.out.println("\nERROR: " + e.getMessage());
+        }
     }
 }

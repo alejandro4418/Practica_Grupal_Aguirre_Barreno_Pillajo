@@ -51,7 +51,7 @@ public class Empleados {
         double salarioCalculado = this.salario * multiplicadorGigante;
 
         if (Double.isInfinite(salarioCalculado)) {
-            throw new ArithmeticException("💥 ¡OVERFLOW DETECTADO! El salario calculado es demasiado grande para la memoria.");
+            throw new ArithmeticException("¡OVERFLOW DETECTADO! El salario calculado es demasiado grande para la memoria.");
         }
         this.salario = salarioCalculado;
     }
